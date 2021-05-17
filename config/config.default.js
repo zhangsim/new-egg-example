@@ -21,7 +21,7 @@ module.exports = appInfo => {
     },
   };
   config.news = {
-    pageSize: 5,
+    pageSize: 10,
     serverUrl: 'https://hacker-news.firebaseio.com/v0',
   };
   // add your middleware config here

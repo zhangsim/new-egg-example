@@ -14,7 +14,7 @@ class NewsService extends Service {
       },
       dataType: 'json',
     });
-
+    console.log('idList', idList)
     // parallel GET detail
     const newsList = await Promise.all(
       Object.keys(idList).map(key => {
@@ -22,6 +22,7 @@ class NewsService extends Service {
         return this.ctx.curl(url, { dataType: 'json' });
       })
     );
+    console.log('newsList', newsList)
     return newsList.map(res => res.data);
   }
 }
